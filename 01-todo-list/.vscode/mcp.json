@@ -1,0 +1,16 @@
+{
+  "servers": {
+    "task-management": {
+      "type": "stdio",
+      "command": "go",
+      "args": ["run", "cmd/mcp/main.go"],
+      "dev": {
+        "watch": "src/**/*.ts",
+        "debug": {
+          "type": "node"
+        }
+      }
+    }
+  },
+  "inputs": []
+}

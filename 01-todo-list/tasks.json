@@ -1,5 +1,6 @@
 [
 	{
+		"ID": 0,
 		"Title": "Read a book",
 		"Description": "The Go Programming Language",
 		"CreatedAt": "2026-04-23T22:16:47.147413+07:00",
@@ -7,6 +8,7 @@
 		"CompletedAt": "2026-04-23T22:16:47.147419+07:00"
 	},
 	{
+		"ID": 0,
 		"Title": "Go for a run",
 		"Description": "5 kilometers in the park",
 		"CreatedAt": "2026-04-23T22:16:47.147417+07:00",
@@ -14,10 +16,83 @@
 		"CompletedAt": "2026-04-27T00:41:45.978163+07:00"
 	},
 	{
+		"ID": 0,
 		"Title": "Learn Go",
 		"Description": "Study golang",
 		"CreatedAt": "2026-04-23T22:51:01.540202+07:00",
-		"IsCompleted": true,
+		"IsCompleted": false,
 		"CompletedAt": "2026-04-27T00:41:56.014278+07:00"
+	},
+	{
+		"ID": 0,
+		"Title": "learn mcp",
+		"Description": "first lesson",
+		"CreatedAt": "2026-04-30T16:49:21.979777+07:00",
+		"IsCompleted": false,
+		"CompletedAt": null
+	},
+	{
+		"ID": 6,
+		"Title": "test",
+		"Description": "unit test",
+		"CreatedAt": "2026-04-30T21:39:44.994771+07:00",
+		"IsCompleted": false,
+		"CompletedAt": "2026-04-30T21:40:55.908755+07:00"
+	},
+	{
+		"ID": 6,
+		"Title": "learn mcp and golang",
+		"Description": "",
+		"CreatedAt": "2026-04-30T23:54:57.754545+07:00",
+		"IsCompleted": false,
+		"CompletedAt": null
+	},
+	{
+		"ID": 7,
+		"Title": "learn mcp and golang",
+		"Description": "Study Model Context Protocol and Go language fundamentals together",
+		"CreatedAt": "2026-05-01T00:59:39.498709+07:00",
+		"IsCompleted": false,
+		"CompletedAt": null
+	},
+	{
+		"ID": 9,
+		"Title": "integrate with mcp",
+		"Description": "Integrate the application with Model Context Protocol server",
+		"CreatedAt": "2026-05-01T01:19:23.449519+07:00",
+		"IsCompleted": false,
+		"CompletedAt": null
+	},
+	{
+		"ID": 10,
+		"Title": "add unit tests for task service",
+		"Description": "",
+		"CreatedAt": "2026-05-01T01:19:23.458265+07:00",
+		"IsCompleted": false,
+		"CompletedAt": null
+	},
+	{
+		"ID": 11,
+		"Title": "test argument parsing in CLI",
+		"Description": "Test argument parsing in CLI commands for task operations",
+		"CreatedAt": "2026-05-01T01:19:23.458736+07:00",
+		"IsCompleted": false,
+		"CompletedAt": null
+	},
+	{
+		"ID": 12,
+		"Title": "add unit tests for task service",
+		"Description": "Add unit tests for task service layer",
+		"CreatedAt": "2026-05-01T01:19:23.459042+07:00",
+		"IsCompleted": false,
+		"CompletedAt": null
+	},
+	{
+		"ID": 12,
+		"Title": "verify MCP server connection",
+		"Description": "Verify MCP server connection is working properly",
+		"CreatedAt": "2026-05-01T01:25:43.492273+07:00",
+		"IsCompleted": false,
+		"CompletedAt": null
 	}
 ]
