@@ -3,6 +3,7 @@ package adapter_mcp
 import (
 	"context"
 	"fmt"
+	"strings"
 	"task-manager/internal/app"
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
@@ -22,6 +23,10 @@ type CompleteTaskInput struct {
 }
 type RemoveTaskInput struct {
 	ID int `json:"id"`
+}
+type ListTasksInput struct{}
+type ListTasksOutput struct {
+	Tasks []string `json:"tasks"`
 }
 
 type Output struct {
@@ -104,5 +109,31 @@ func RegisterTools(server *mcp.Server, svc *app.TaskService) {
 				&mcp.TextContent{Text: fmt.Sprintf("Task %d removed", input.ID)},
 			},
 		}, Output{Message: "Task removed successfully"}, nil
+	})
+
+	mcp.AddTool(server, &mcp.Tool{
+		Name:        "list_tasks",
+		Description: "List all tasks",
+	}, func(ctx context.Context, req *mcp.CallToolRequest, input ListTasksInput) (
+		*mcp.CallToolResult,
+		ListTasksOutput,
+		error,
+	) {
+		tasks := svc.List()
+
+		var taskStrings []string
+		for _, t := range tasks {
+			status := "pending"
+			if t.IsCompleted {
+				status = "completed"
+			}
+			taskStrings = append(taskStrings, fmt.Sprintf("[%d] %s - %s (%s)", t.ID, t.Title, t.Description, status))
+		}
+
+		return &mcp.CallToolResult{
+			Content: []mcp.Content{
+				&mcp.TextContent{Text: "Tasks:\n" + strings.Join(taskStrings, "\n")},
+			},
+		}, ListTasksOutput{Tasks: taskStrings}, nil
 	})
 }

@@ -28,7 +28,7 @@ func main() {
 func callLLM(prompt string) string {
 
 	payload := map[string]any{
-		"model": "local-model", // config trong LLM Studio
+		"model": "qwen/qwen2.5-coder-14b", // config trong LLM Studio
 		"messages": []Message{
 			{Role: "user", Content: prompt},
 		},
